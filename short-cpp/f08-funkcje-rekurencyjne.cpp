@@ -1,14 +1,20 @@
-﻿// Parametry funkcji main
+﻿// Funkcje rekrencyjne na przykładzie sumy ciągu n, n-1, n-2, ..., 0
+// Koder na strychu 2021 
+// https://www.youtube.com/c/KodernaStrychu/
 
 #include <iostream>
 using namespace std;
 
-int main(int argc, char *argv[])
+int suma(int a)
 {
-    for(int i=0; i<argc; i++)
-        cout << argv[i] << endl;
+    if(a==0) return 0;
+    return a+suma(a-1);
+}
 
-    return 0;
+int main()
+{
+   cout << suma(2) << endl;
+   return 0;
 }
 
 
